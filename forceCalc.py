@@ -1,28 +1,34 @@
 import math
+import sys
+import subprocess as sp
 
-print ("what variables are known?")
-print("1: mass and acceleration")
-print("2: force and acceleration")
-print("3: mass and force")
-choice = int(input("enter your choice"))
 
-def solve():
-    if choice == 1:
-        mass = int(input("enter the mass"))
-        acceleration = int(input("enter the acceleration"))
-        result = mass * acceleration
-    elif choice == 2:
-        force = int(input("enter the force"))
-        acceleration = int(input("enter the acceleration"))
-        result = force/acceleration
-    elif choice == 3:
-        mass = int(input("enter the mass"))
-        force = int(input("enter the force"))
-        result = force/mass
+def solveImproved():
+    print("leave blank for item that is unknown")
+    force = input("enter force: ")
+    mass = input("enter mass: ")
+    acceleration = input("enter acceleration: ")
+    if force == "":
+        mass = float(mass)
+        acceleration = float(acceleration)
+        result = float(mass * acceleration)
+    elif mass == "":
+        force = float(force)
+        acceleration = float(acceleration)
+        result = float(force/acceleration)
+    elif acceleration == "":
+        mass = float(mass)
+        force = float(force)
+        result = float(force/mass)
     else:
-        print("you must enter 1, 2 or 3")
-        return
+        print("incorrect usage")
+        sys.exit(1)
+    print(result)
 
-    print("the result is: " + result)
+def main():
+    sp.call('clear',shell=True)
+    solveImproved()
 
-solve()
+
+if __name__ == '__main__':
+    main()
