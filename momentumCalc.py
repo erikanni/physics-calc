@@ -1,5 +1,8 @@
 import math
+import sys
+import subprocess as sp
 
+#same logic as forceCalc
 def solve():
     print("leave blank for item that is unknown")
     momentum = input("enter momentum: ")
@@ -24,7 +27,7 @@ def solve():
 
 def main():
     sp.call('clear',shell=True)
-    solveImproved()
+    solve()
 
 
 if __name__ == '__main__':

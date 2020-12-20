@@ -27,7 +27,7 @@ def solve():
 
 def main():
     sp.call('clear',shell=True)
-    solveImproved()
+    solve()
 
 
 if __name__ == '__main__':
