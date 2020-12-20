@@ -3,7 +3,7 @@ import sys
 import subprocess as sp
 
 
-def solveImproved():
+def solve():
     print("leave blank for item that is unknown")
     force = input("enter force: ")
     mass = input("enter mass: ")
