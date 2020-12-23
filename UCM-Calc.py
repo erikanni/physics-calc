@@ -1,0 +1,34 @@
+import math
+
+def solve():
+    choice = 0
+    print("1: Highest Point")
+    print("2: Lowest Point")
+    print("3: Half Way")
+    choice = int(input("enter your choice: "))
+
+    if choice == 1:
+        T = (input("enter tension: "))
+        m = (input("enter mass: "))
+        v = (input("enter velocity: "))
+        r = (input("enter radius: "))
+        
+
+        if T == "":
+            W = float(m) * 9.8
+            m = float(m)
+            v = float(v)
+            r = float(r)
+
+            T = (m*(v*v))/(r-W)
+        elif v == "":
+            W = float(m) * 9.8 
+            m = float(m)
+            r = float(r)
+            T = float(T)
+            v = math.sqrt((T/m*v)/r-W)
+        elif r == "":
+
+
+
+
