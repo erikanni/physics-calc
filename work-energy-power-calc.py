@@ -23,6 +23,28 @@ def solve(choice):
 
             displacement = work/force
             return displacement
+    if choice == 3:
+        power = input("enter power: ")
+        work = input("enter work: ")
+        time = input("enter time: ")
+        if power == "":
+            work = float(work)
+            time = float(time)
+
+            power = work/time
+            return power
+        if work == "":
+            power = float(power)
+            time = float(time)
+
+            work = power * time
+            return work
+        if time == "":
+            power = float(power)
+            work = float(work)
+
+            time = power * work
+            return time
 
 choice = int(input("enter 1 for work, 2 for energy, and 3 for power: "))
 print(solve(choice))
