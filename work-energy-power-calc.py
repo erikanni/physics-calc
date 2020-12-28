@@ -9,25 +9,25 @@ def solve(choice):
             force = float(force)
             displacement = float(displacement)
 
-            work = force * displacement
+            work = str(force * displacement) + " J"
             return work
         if force == "":
             work = float(work)
             displacement = float(displacement)
 
-            force = work/displacement
+            force = str(work/displacement) + " N"
             return force
         if displacement == "":
             work = float(work)
             force = float(force)
 
-            displacement = work/force
+            displacement = str(work/force) + " m"
             return displacement
 
     if choice == 2:
         print("this section is not currently finished")
         #work in progress
-        
+
     if choice == 3:
         power = input("enter power: ")
         work = input("enter work: ")
@@ -36,21 +36,22 @@ def solve(choice):
             work = float(work)
             time = float(time)
 
-            power = work/time
+            power = str(work/time) + " Watts"
             return power
         if work == "":
             power = float(power)
             time = float(time)
 
-            work = power * time
+            work = str(power * time) + " J"
             return work
         if time == "":
             power = float(power)
             work = float(work)
 
-            time = power * work
+            time = str(power * work) + " s"
             return time
 
+print("leave blank for the value you want to calculate")
 choice = int(input("enter 1 for work, 2 for energy, and 3 for power: "))
 print(solve(choice))
 
