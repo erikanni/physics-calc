@@ -23,6 +23,11 @@ def solve(choice):
 
             displacement = work/force
             return displacement
+
+    if choice == 2:
+        print("this section is not currently finished")
+        #work in progress
+        
     if choice == 3:
         power = input("enter power: ")
         work = input("enter work: ")
