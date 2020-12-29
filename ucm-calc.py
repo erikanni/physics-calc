@@ -19,21 +19,21 @@ def solve():
             v = float(v)
             r = float(r)
             T = (m*(v*v))/r+W
-            result = str(T)
+            result = str(T) + " N"
         elif v == "":
             W = float(m) * 9.8 
             m = float(m)
             r = float(r)
             T = float(T)
             v = math.sqrt((T/m*v)/r+W)
-            result = str(v)
+            result = str(v) + " m/s"
         elif r == "": #needs a lot of fixing
             W = float(m) * 9.8 
             m = float(m)
             v = float(v)
             T = float(T)
             r = (m*(v*v))/T - W
-            result = str(r)
+            result = str(r) + " m"
     elif choice == 2:
         T = (input("enter tension: "))
         m = (input("enter mass: "))
@@ -46,21 +46,21 @@ def solve():
             v = float(v)
             r = float(r)
             T = (m*(v*v))/r-W
-            result = str(T)
+            result = str(T) + " N"
         elif v == "":
             W = float(m) * 9.8 
             m = float(m)
             r = float(r)
             T = float(T)
             v = math.sqrt((T/m*v)/r-W)
-            result = str(v)
+            result = str(v) + " m/s"
         elif r == "": #needs a lot of fixing
             W = float(m) * 9.8 
             m = float(m)
             v = float(v)
             T = float(T)
             r = (m*(v*v))/T + W
-            result = str(r)
+            result = str(r) + " m"
 
     elif choice == 3:
         T = (input("enter tension: "))
@@ -73,14 +73,14 @@ def solve():
             v = float(v)
             r = float(r)
             T = (m*(v*v))/r
-            result = str(T)
+            result = str(T) + " N"
         elif r == "": ## needs a lot of fixing
             W = float(m) * 9.8 
             m = float(m)
             v = float(v)
             T = float(T)
             r = (m*(v*v))/T
-            result = str(r)
+            result = str(r) + " m"
 
         elif v == "":
             W = float(m) * 9.8 
@@ -88,7 +88,7 @@ def solve():
             r = float(r)
             T = float(T)
             v = math.sqrt(T/m*v)/r 
-            result = str(v)
+            result = str(v) + " m/s"
     else:
         print("that is an invalid input")
         return
