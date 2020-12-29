@@ -8,12 +8,12 @@ def solve(choice):
         uk = float(input("friction coefficient: "))
         theta = float(input("angle (degrees): "))
         normal = (math.cos(theta)* mass * G_CONSTANT)
-        Ff = normal * uk
+        Ff = str(normal * uk) + " N"
         return Ff
     if choice == 2:
         mass = float(input("mass: "))
         theta = float(input("angle (degrees): "))
-        Fa = (math.sin(math.radians(theta)) * mass * G_CONSTANT)
+        Fa = str((math.sin(math.radians(theta)) * mass * G_CONSTANT)) + " N"
         return Fa
     if choice == 3:
         mass = float(input("mass: "))
@@ -21,8 +21,8 @@ def solve(choice):
         theta = float(input("angle (degrees): "))
         normal = (math.cos(math.radians(theta))* mass * G_CONSTANT)
         Ff = normal * uk
-        Fa = (math.sin(math.radians(theta)) * mass * G_CONSTANT)
-        net = Fa - Ff
+        Fa = str((math.sin(math.radians(theta)) * mass * G_CONSTANT)) + " N"
+        net = str(Fa - Ff) + " N"
         return net
 
 
