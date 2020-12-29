@@ -11,15 +11,15 @@ def solve():
     if momentum == "":
         mass = float(mass)
         velocity = float(velocity)
-        result = float(mass * velocity)
+        result = str(float(mass * velocity)) + " kgm/s"
     elif mass == "":
         momentum = float(momentum)
         velocity = float(velocity)
-        result = float(momentum/velocity)
+        result = str(float(momentum/velocity)) + " kg"
     elif velocity == "":
         mass = float(mass)
         momentum = float(momentum)
-        result = float(momentum/mass)
+        result = str(float(momentum/mass)) + " m/s"
     else:
         print("incorrect usage")
         sys.exit(1)
