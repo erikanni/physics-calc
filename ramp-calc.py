@@ -10,12 +10,12 @@ def solve(choice):
         normal = (math.cos(theta)* mass * G_CONSTANT)
         Ff = str(normal * uk) + " N"
         return Ff
-    if choice == 2:
+    elif choice == 2:
         mass = float(input("mass: "))
         theta = float(input("angle (degrees): "))
         Fa = str((math.sin(math.radians(theta)) * mass * G_CONSTANT)) + " N"
         return Fa
-    if choice == 3:
+    elif choice == 3:
         mass = float(input("mass: "))
         uk = float(input("friction coefficient: "))
         theta = float(input("angle (degrees): "))
