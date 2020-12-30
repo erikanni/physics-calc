@@ -11,24 +11,24 @@ def solve(choice):
 
             work = str(force * displacement) + " J"
             return work
-        if force == "":
+        elif force == "":
             work = float(work)
             displacement = float(displacement)
 
             force = str(work/displacement) + " N"
             return force
-        if displacement == "":
+        elif displacement == "":
             work = float(work)
             force = float(force)
 
             displacement = str(work/force) + " m"
             return displacement
 
-    if choice == 2:
+    elif choice == 2:
         print("this section is not currently finished")
         #work in progress
 
-    if choice == 3:
+    elif choice == 3:
         power = input("enter power: ")
         work = input("enter work: ")
         time = input("enter time: ")
@@ -38,13 +38,13 @@ def solve(choice):
 
             power = str(work/time) + " Watts"
             return power
-        if work == "":
+        elif work == "":
             power = float(power)
             time = float(time)
 
             work = str(power * time) + " J"
             return work
-        if time == "":
+        elif time == "":
             power = float(power)
             work = float(work)
 
