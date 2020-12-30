@@ -40,12 +40,16 @@ v1deg = int(input("Vector 1 degree: "))
 v2mag = int(input("Vector 2 Magnitude: "))
 v2deg = int(input("Vector 2 degree: "))
 
-(vsummag, vsumdeg) = addVectors(v1mag, v1deg, v2mag, v2deg)
-(vsubmag, vsubdeg) = subtractVectors(v1mag, v1deg, v2mag, v2deg)
 
-choice = int(input("1: add 2: subtract"))
-if choice == 1:
-    print(vsummag + "  " + vsumdeg)
-elif choice == 2:
-    print(vsubmag + " " + vsubdeg)
+def menu(v1mag, v1deg, v2mag, v2deg):
+    (vsummag, vsumdeg) = addVectors(v1mag, v1deg, v2mag, v2deg)
+    (vsubmag, vsubdeg) = subtractVectors(v1mag, v1deg, v2mag, v2deg)
+
+    choice = int(input("1: add 2: subtract"))
+    if choice == 1:
+        print(str(vsummag) + "  " + str(vsumdeg))
+    elif choice == 2:
+        print(str(vsubmag) + " " + str(vsubdeg))
+
+menu(v1mag, v1deg, v2mag, v2deg)
 
