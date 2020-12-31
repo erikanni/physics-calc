@@ -4,15 +4,19 @@ import subprocess as sp
 
 def solve():
     print("Second object should be the one for which direction and velocity is known post collision")
+
     angle1 = float(input("enter the first angle"))
     angle2 = float(input("enter the second angle"))
 
     mass1 = float(input("enter the first mass"))
     velocity1 = float(input("enter the first velocity"))
 
-    
     mass2 = float(input("enter the second mass"))
     velocity2 = float(input("enter the second velocity"))
+
+    magResult1 = float(input("enter the result magnitude of one of the objects: "))
+    degResult1 = float(input("enter the result degree of one of the objects: "))
+
 
     momentum1 = mass1 * velocity1
     momentum2 = mass2 * velocity2
@@ -23,16 +27,11 @@ def solve():
     xcomp2 = (math.cos(math.radians(angle2))) * momentum2
     ycomp2 = (math.sin(math.radians(angle2))) * momentum2
 
-
     xMagTotal = xcomp1 + xcomp2
     yMagTotal = ycomp1 + ycomp2
 
     hyp = math.sqrt(math.pow(xMagTotal, 2) + math.pow(yMagTotal, 2))
     deg = math.degrees(math.atan2(yMagTotal, xMagTotal))
-
-
-    magResult1 = float(input("enter the result magnitude of one of the objects: "))
-    degResult1 = float(input("enter the result degree of one of the objects: "))
 
     resultxcomp1 = (math.cos(math.radians(deg))) * hyp
     resultycomp1 = (math.sin(math.radians(deg))) * hyp
