@@ -20,6 +20,7 @@ def solve():
             r = float(r)
             T = (m*(v*v))/r+W
             result = str(T) + " N"
+            
         elif v == "":
             W = float(m) * 9.8 
             m = float(m)
@@ -27,6 +28,7 @@ def solve():
             T = float(T)
             v = math.sqrt((T/m*v)/r+W)
             result = str(v) + " m/s"
+            
         elif r == "": #needs a lot of fixing
             W = float(m) * 9.8 
             m = float(m)
@@ -34,6 +36,7 @@ def solve():
             T = float(T)
             r = (m*(v*v))/T - W
             result = str(r) + " m"
+            
     elif choice == 2:
         T = (input("enter tension: "))
         m = (input("enter mass: "))
@@ -47,6 +50,7 @@ def solve():
             r = float(r)
             T = (m*(v*v))/r-W
             result = str(T) + " N"
+            
         elif v == "":
             W = float(m) * 9.8 
             m = float(m)
@@ -54,6 +58,7 @@ def solve():
             T = float(T)
             v = math.sqrt((T/m*v)/r-W)
             result = str(v) + " m/s"
+            
         elif r == "": #needs a lot of fixing
             W = float(m) * 9.8 
             m = float(m)
@@ -67,6 +72,7 @@ def solve():
         m = (input("enter mass: "))
         v = (input("enter velocity: "))
         r = (input("enter radius: "))
+        
         if T == "":
             W = float(m) * 9.8
             m = float(m)
@@ -74,6 +80,7 @@ def solve():
             r = float(r)
             T = (m*(v*v))/r
             result = str(T) + " N"
+            
         elif r == "": ## needs a lot of fixing
             W = float(m) * 9.8 
             m = float(m)
