@@ -19,24 +19,21 @@ def solve():
             v = float(v)
             r = float(r)
             T = (m*(v*v))/r+W
-            result = str(T) + " N"
-            
+            return T, "N"
         elif v == "":
             W = float(m) * 9.8 
             m = float(m)
             r = float(r)
             T = float(T)
-            v = math.sqrt((T/m*v)/r+W)
-            result = str(v) + " m/s"
-            
-        elif r == "": #needs a lot of fixing
+            v = math.sqrt(((T - W)*r)/m)
+            return v, "m/s"
+        elif r == "": 
             W = float(m) * 9.8 
             m = float(m)
             v = float(v)
             T = float(T)
-            r = (m*(v*v))/T - W
-            result = str(r) + " m"
-            
+            r = (m*v*v)/(T - W)
+            return r, "m"
     elif choice == 2:
         T = (input("enter tension: "))
         m = (input("enter mass: "))
@@ -49,56 +46,54 @@ def solve():
             v = float(v)
             r = float(r)
             T = (m*(v*v))/r-W
-            result = str(T) + " N"
-            
+            return T, "N"
         elif v == "":
             W = float(m) * 9.8 
             m = float(m)
             r = float(r)
             T = float(T)
-            v = math.sqrt((T/m*v)/r-W)
-            result = str(v) + " m/s"
-            
-        elif r == "": #needs a lot of fixing
+            v = math.sqrt(((T + W)*r)/m)
+            return v, "m/s"
+        elif r == "": 
             W = float(m) * 9.8 
             m = float(m)
             v = float(v)
             T = float(T)
-            r = (m*(v*v))/T + W
-            result = str(r) + " m"
+            r = (m*v*v)/(T + W)
+            return r, "m"
 
     elif choice == 3:
         T = (input("enter tension: "))
         m = (input("enter mass: "))
         v = (input("enter velocity: "))
         r = (input("enter radius: "))
-        
         if T == "":
             W = float(m) * 9.8
             m = float(m)
             v = float(v)
             r = float(r)
             T = (m*(v*v))/r
-            result = str(T) + " N"
-            
-        elif r == "": ## needs a lot of fixing
+            return T, "N"
+        elif r == "": 
             W = float(m) * 9.8 
             m = float(m)
             v = float(v)
             T = float(T)
-            r = (m*(v*v))/T
-            result = str(r) + " m"
+            r = (m*v*v)/T
+            return (r, "m")
 
         elif v == "":
             W = float(m) * 9.8 
             m = float(m)
             r = float(r)
             T = float(T)
-            v = math.sqrt(T/m*v)/r 
-            result = str(v) + " m/s"
+            v = math.sqrt((T*r)/m)
+            return (v, "m/s")
     else:
         print("that is an invalid input")
         return
 
-    print("the unknown variable is " + result)
-solve()
+
+
+result, units = solve()
+print(f"the result is {result:.3f} {units}")
