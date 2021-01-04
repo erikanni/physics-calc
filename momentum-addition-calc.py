@@ -47,9 +47,11 @@ def solve():
 
     velocityPostCollision = Finalhyp/mass2
 
+    sp.call('clear',shell=True)
     print("the magnitude of the other object's momentum is: " + str(Finalhyp) + "and the angle is: " + str(Finaldeg))
     print("the magnitude of the velocity of the object is: " + str(velocityPostCollision))
 
+sp.call('clear',shell=True)
 solve()
 
 
