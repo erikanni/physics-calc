@@ -12,17 +12,17 @@ def solve():
     if force == "":
         mass = float(mass)
         acceleration = float(acceleration)
-        result = str(float(mass * acceleration)) + " N"
+        result = str(float(mass * acceleration)) + "N"
         
     elif mass == "":
         force = float(force)
         acceleration = float(acceleration)
-        result = str(float(force/acceleration)) + " kg"
+        result = str(float(force/acceleration)) + "kg"
         
     elif acceleration == "":
         mass = float(mass)
         force = float(force)
-        result = str(float(force/mass)) + " m/s^2"
+        result = str(float(force/mass)) + "m/s^2"
         
     else:
         print("incorrect usage")
