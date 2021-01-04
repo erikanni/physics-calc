@@ -96,4 +96,5 @@ def solve():
 
 
 result, units = solve()
+sp.call('clear',shell=True)
 print(f"the result is {result:.3f} {units}")
