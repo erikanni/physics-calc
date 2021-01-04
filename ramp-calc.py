@@ -30,5 +30,6 @@ print("1: calculate force of friction")
 print("2: calculate paralell force")
 print("3: calculate net force")
 choice = int(input("enter your choice: "))
+sp.call('clear',shell=True)
 print(f"{solve(choice):.3f}")
 
