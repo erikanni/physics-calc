@@ -22,6 +22,9 @@ def solve():
         rev = deg/360 
         print("deg: " + str(deg))
         print("rev: " + str(rev))
+        
+    #TODO 
+    #make kinematics
 
 
 
