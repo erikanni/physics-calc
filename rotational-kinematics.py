@@ -23,6 +23,8 @@ def solve():
         print("deg: " + str(deg))
         print("rev: " + str(rev))
         
+   
+def kinematics():
     #TODO 
     #make kinematics
 
