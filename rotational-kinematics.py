@@ -27,6 +27,13 @@ def solve():
 def kinematics():
     #TODO 
     #make kinematics
+    a = float(input("a: "))
+    vi = float(input("vi: "))
+    X = float(input("X: "))
+    t = float(input("t: "))
+    vf = float(input("vf: "))
+
+    
 
 
 
