@@ -33,7 +33,18 @@ def kinematics():
     t = float(input("t: "))
     vf = float(input("vf: "))
 
-    
+    if str(X) == "":
+        #vf = vi + at
+        if str(vf) == "":
+            vf = vi+ (a*t)
+        #TODO
+    if str(t) == "":
+        #vf^2 = vi^2 + 2aX
+    if str(vf) == "":
+        #vi*T = X -(a*t^2)/2
+        
+
+
 
 
 
