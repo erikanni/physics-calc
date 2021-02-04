@@ -30,3 +30,30 @@ def solve():
         sys.exit(1)
         
     print(result)
+
+def solve2():
+    print("leave blank for item that is unknown")
+    a = input("enter a: ")
+    r = input("enter r: ")
+    alpha = input("enter alpha: ")
+    
+    if a == "":
+        alpha = float(alpha)
+        r = float(r)
+        result = str(float(alpha * r)) + "m/s^2"
+        
+    elif alpha == "":
+        r = float(r)
+        a = float(a)
+        result = str(float(a/r)) + "rad/s^2"
+        
+    elif r == "":
+        alpha = float(alpha)
+        a = float(a)
+        result = str(float(a/alpha)) + "m"
+        
+    else:
+        print("incorrect usage")
+        sys.exit(1)
+        
+    print(result)
