@@ -57,3 +57,30 @@ def solve2():
         sys.exit(1)
         
     print(result)
+
+def solve3():
+    print("leave blank for item that is unknown")
+    s = input("enter s: ")
+    r = input("enter r: ")
+    theta = input("enter theta: ")
+    
+    if s == "":
+        theta = float(theta)
+        r = float(r)
+        result = str(float(theta * r)) + "m/s^2"
+        
+    elif theta == "":
+        r = float(r)
+        s = float(s)
+        result = str(float(s/r)) + "rad/s^2"
+        
+    elif r == "":
+        theta = float(theta)
+        s = float(s)
+        result = str(float(s/theta)) + "m"
+        
+    else:
+        print("incorrect usage")
+        sys.exit(1)
+        
+    print(result)
